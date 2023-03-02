@@ -1,0 +1,48 @@
+﻿@{
+}
+
+@model BooksViewModel
+
+<h1>Books</h1>
+
+@foreach (Book b in Model.Books)
+{
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @b.Title
+            <span class="badge bg-primary rounded-pill" style="float:right;">
+                <small>@b.Price.ToString("c")</small>
+            </span>
+        </h4>
+    </div>
+    <div class="card-text p-1">Author: @b.Author</div>
+    <div class="card-text p-1">Publisher: @b.Publisher</div>
+    <div class="card-text p-1">ISBN: @b.Isbn</div>
+    <div class="card-text p-1">Classification: @b.Classification</div>
+    <div class="card-text p-1">Category: @b.Category</div>
+    <div class="card-text p-1">Page Count: @b.PageCount</div>
+</div>
+}
+<div page-blah="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>
+
+
+@*<h3>@b.Title</h3>
+
+<ul>
+    <li>Author: @b.Author</li>
+    <li>Publisher: @b.Publisher</li>
+    <li>ISBN: @b.Isbn</li>
+    <li>Classification: @b.Classification</li>
+    <li>Category: @b.Category</li>
+    <li>Page Count: @b.PageCount</li>
+    <li>Price: $@b.Price</li>
+</ul>
+
+<br />
+}
+
+<div page-blah="@Model.PageInfo" page-action="Index"></div>*@
