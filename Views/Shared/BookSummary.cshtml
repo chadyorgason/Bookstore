@@ -24,7 +24,13 @@
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
 
         <span class="card-text">
-            <button type="submit" class="btn btn-success btn-sm float-end">Buy</button>
+            <button type="submit" class="btn btn-success btn-sm float-end" data-toggle="tooltip" title="Add to cart">Buy</button>
         </span>
     </form>
 </div>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
